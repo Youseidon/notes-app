@@ -22,8 +22,7 @@ yargs.command({
         }
     },
     handler: function(parameter) {
-        console.log('Title: ', parameter.title);
-        console.log('Body: ', parameter.body);
+        notes.addNote(parameter.title, parameter.body);
     }
 })
 
@@ -52,4 +51,3 @@ yargs.command({
 });
 
 yargs.parse();
-// console.log(yargs.argv);
